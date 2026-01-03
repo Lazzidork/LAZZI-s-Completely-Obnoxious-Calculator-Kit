@@ -7,7 +7,7 @@ class AntiSubscriptionTab(ttk.Frame):
 
         self.plans = []
 
-        # ---------- INPUT ----------
+        # ---------- INPUT ------------
         self.name_entry = tk.Entry(self, fg="gray")
         self.name_entry.pack()
         self.name_entry.insert(0, "NAME HERE")
@@ -25,7 +25,7 @@ class AntiSubscriptionTab(ttk.Frame):
         self.price_entry.bind("<FocusIn>", self.clear_price)
         self.price_entry.bind("<FocusOut>", self.restore_price)
 
-        # ---------- TABLE ----------
+        # --------- TABLE -----------
         columns = ("rank", "name", "daily", "monthly", "yearly")
         self.table = ttk.Treeview(self, columns=columns, show="headings")
         self.table.pack(fill="both", expand=True)
@@ -35,15 +35,15 @@ class AntiSubscriptionTab(ttk.Frame):
 
         self.table.column("rank", width=50, anchor="center", stretch=False)
 
-        # ---------- TAGS ----------
+        # -------- TAGS ---------
         self.table.tag_configure("cheapest", background="#d1fae5")
 
-        # ---------- BUTTONS ----------
+        # ---------- BUTTONS --------------
         tk.Button(self, text="Add", command=self.add_plan).pack()
         tk.Button(self, text="Delete Selected", command=self.delete_selected).pack()
         tk.Button(self, text="Remove All", command=self.remove_all).pack()
 
-    # ---------- PLACEHOLDERS ----------
+    # -------- PLACEHOLDERS ---------
     def clear_name(self, _):
         if self.name_entry.get() == "NAME HERE":
             self.name_entry.delete(0, tk.END)
@@ -64,7 +64,7 @@ class AntiSubscriptionTab(ttk.Frame):
             self.price_entry.insert(0, "PRICE HERE")
             self.price_entry.config(fg="gray")
 
-    # ---------- LOGIC ----------
+    # ----------- LOGIC -------------
     def add_plan(self):
         name = self.name_entry.get()
         raw_price = self.price_entry.get()
@@ -96,16 +96,39 @@ class AntiSubscriptionTab(ttk.Frame):
         self.table.delete(*self.table.get_children())
         sorted_plans = sorted(self.plans, key=lambda x: x["yearly"])
 
-        for i, plan in enumerate(sorted_plans, 1):
-            values = (
-                i,
-                plan["name"],
-                f"{plan['daily']:.2f}",
-                f"{plan['monthly']:.2f}",
-                f"{plan['yearly']:.2f}",
-            )
+        for i, plan in enumerate(sorted_plans, start=1):
+
+            daily = f"{plan['daily']:.2f}"
+
+            monthly = f"{plan['monthly']:.2f}"
+
+            yearly = f"{plan['yearly']:.2f}"
+
+            if plan["source"] == "daily":
+
+                daily = "⭐ " + daily
+
+            elif plan["source"] == "monthly":
+
+                monthly = "⭐ " + monthly
+
+            else:
+
+                yearly = "⭐ " + yearly
+
             tags = ("cheapest",) if i == 1 else ()
-            self.table.insert("", "end", values=values, tags=tags)
+
+            self.table.insert(
+
+                "",
+
+                "end",
+
+                values=(i, plan["name"], daily, monthly, yearly),
+
+                tags=tags
+
+            )
 
     def delete_selected(self):
         selected = self.table.selection()

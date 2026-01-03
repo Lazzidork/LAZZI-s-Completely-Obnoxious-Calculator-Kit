@@ -1,9 +1,5 @@
 # LAZZI’s C.O.C.K
 
-\## Version
-
-Current version: \*\*1.0.0\*\*
-
 
 
 Completely Obnoxious Calculator Kit.
