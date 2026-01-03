@@ -1,8 +1,6 @@
-# LAZZI’s C.O.C.K
+# LAZZI’s Completely Obnoxious Calculator Kit.
 
 
-
-Completely Obnoxious Calculator Kit.
 
 
 
@@ -16,7 +14,7 @@ A personal collection of multiple highly specific calculator that no one uses ex
 
 Features:
 
-* Anti Subscription Scam (A.S.S.)
+Anti Subscription Scam 
 * Compares subscription prices of the same benefits
 * Daily / monthly / yearly normalization
 * Automatic ranking
