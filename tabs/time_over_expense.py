@@ -73,6 +73,9 @@ class TimeOverExpense(ttk.Frame):
             messagebox.showerror("Error", "User do not have income")
             return
 
+        if price == 0:
+            messagebox.showerror("Error", "Price cannot be zero")
+
     #-------------Converting data ----------
         if period == "monthly":
             hours_per_period = 174
@@ -85,6 +88,12 @@ class TimeOverExpense(ttk.Frame):
         hourly = income / hours_per_period
         total_hours = price / hourly
 
+        # --- Split into hours + leftover minutes ---
+        hours_int = int(total_hours)
+        minutes_int = round((total_hours - hours_int) * 60)
+
+        rounded_hourly = round(hourly, 2)
+
 
         def has_decimal(number):
             return number % 1 != 0
@@ -93,14 +102,12 @@ class TimeOverExpense(ttk.Frame):
 
         self.output_box.delete('1.0', tk.END)  # clear old stuff
 
-        if rounded_hours >= 1:
-            self.output_box.insert(
-                tk.END,
-                f"You make {rounded_hourly} hourly, and it will cost you {rounded_hours} hours"
-                + (f" and {rounded_minutes} minutes" if has_decimal(hours) and rounded_minutes != 0 else "")
-            )
-
-        elif rounded_hours < 1:
-            self.output_box.insert(
-                tk.END, f"you make {rounded_hourly} hourly, "
-                        f"and it will cost you {rounded_minutes} minutes")
+        # --- Build output message ---
+        if hours_int >= 1:
+            msg = f"You make {rounded_hourly} hourly, and it will cost you {hours_int} hour"
+            if hours_int != 1:
+                msg += "s"
+            if minutes_int > 0:
+                msg += f" and {minutes_int} minute{'s' if minutes_int != 1 else ''}"
+        else:
+            msg = f"You make {rounded_hourly} hourly, and it will cost you {minutes_int} minute{'s' if minutes_int != 1 else ''}"

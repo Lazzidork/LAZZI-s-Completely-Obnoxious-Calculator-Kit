@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd721941-0449-468d-94a0-a6b47ebf733d" name="Changes" comment="-Remove redundant texts in README&#10;-Fix PERIOD HIGHLIGHT" />
+    <list default="true" id="cd721941-0449-468d-94a0-a6b47ebf733d" name="Changes" comment="-Working on 1.1.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +68,8 @@
       <option name="presentableId" value="Default" />
       <updated>1767497970693</updated>
       <workItem from="1767497972047" duration="1877000" />
-      <workItem from="1767500717322" duration="6033000" />
+      <workItem from="1767500717322" duration="6430000" />
+      <workItem from="1767516438179" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="-Remove redundant texts in README&#10;-Fix PERIOD HIGHLIGHT">
       <option name="closed" value="true" />
@@ -76,7 +79,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767502240685</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="-Working on 1.1.0">
+      <option name="closed" value="true" />
+      <created>1767507169900</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1767507169900</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,12 +96,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-Remove redundant texts in README" />
     <MESSAGE value="-Remove redundant texts in README&#10;-Fix PERIOD HIGHLIGHT" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Remove redundant texts in README&#10;-Fix PERIOD HIGHLIGHT" />
+    <MESSAGE value="-Working on 1.1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Working on 1.1.0" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LAZZI_s_Completely_Obnoxious_Calculator_Kit$main.coverage" NAME="main Coverage Results" MODIFIED="1767506439471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LAZZI_s_Completely_Obnoxious_Calculator_Kit$app.coverage" NAME="app Coverage Results" MODIFIED="1767501992528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LAZZI_s_Completely_Obnoxious_Calculator_Kit$main.coverage" NAME="main Coverage Results" MODIFIED="1767516884712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LAZZI_s_Completely_Obnoxious_Calculator_Kit$app.coverage" NAME="app Coverage Results" MODIFIED="1767516675775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LAZZI_s_Completely_Obnoxious_Calculator_Kit$anti_subscription.coverage" NAME="anti_subscription Coverage Results" MODIFIED="1767498185477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tabs" />
-    <SUITE FILE_PATH="coverage/LAZZI_s_Completely_Obnoxious_Calculator_Kit$time_over_expense.coverage" NAME="time_over_expense Coverage Results" MODIFIED="1767505572855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tabs" />
+    <SUITE FILE_PATH="coverage/LAZZI_s_Completely_Obnoxious_Calculator_Kit$time_over_expense.coverage" NAME="time_over_expense Coverage Results" MODIFIED="1767516881643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tabs" />
   </component>
 </project>
