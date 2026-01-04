@@ -81,6 +81,8 @@ class TimeOverExpense(ttk.Frame):
             hours_per_period = 174
         elif period == "yearly":
             hours_per_period = 174 * 12  # 2088
+        elif period == "hourly":
+            hours_per_period = 1
         else:
             messagebox.showerror("Error", f"Unknown period: {period}")
             return
