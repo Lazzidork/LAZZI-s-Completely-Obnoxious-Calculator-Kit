@@ -36,4 +36,10 @@ Time Over Expense
 -Calculates approximate time cost relative to item prices (in hours and minutes)
 
 
+---------------CHANGELOG-------------
+v1.1.0:
+
+-Added Time Over Expense
+
+-Splitted script for future ease of development
 
