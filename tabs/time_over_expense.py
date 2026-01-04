@@ -95,8 +95,7 @@ class TimeOverExpense(ttk.Frame):
         rounded_hourly = round(hourly, 2)
 
 
-        def has_decimal(number):
-            return number % 1 != 0
+
 
         #print(f"you make {rounded_hourly} hourly, and it will cost you {rounded_hours} hours")
 
@@ -111,3 +110,5 @@ class TimeOverExpense(ttk.Frame):
                 msg += f" and {minutes_int} minute{'s' if minutes_int != 1 else ''}"
         else:
             msg = f"You make {rounded_hourly} hourly, and it will cost you {minutes_int} minute{'s' if minutes_int != 1 else ''}"
+
+        self.output_box.insert(tk.END, msg)
